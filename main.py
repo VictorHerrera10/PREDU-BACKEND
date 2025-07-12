@@ -154,3 +154,8 @@ async def prediccion_psicologica(data: PsicoInput):
     ]
     facultad_predicha = predecir_facultad_psychological(model_psychological, new_student_psychological)
     return {"facultad_predicha": facultad_predicha}
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
